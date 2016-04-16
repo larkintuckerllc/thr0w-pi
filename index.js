@@ -7,5 +7,6 @@ function handleConnection(socket) {
   socket.on('message', handleMessage);
   function handleMessage(msg) {
     console.log('MSG: ' + msg);
+    socket.emit('response', 'hello server');
   }
 }
